@@ -18,34 +18,33 @@ class GetTotalData extends Component{
 
     render() {
         return (
-            <div className="total-data grid-x grid-margin-x">
-                <table className="data-table">
-                    <thead>
-                        <tr>
-                            <th colSpan="2">SUMMARY</th>
-                        </tr>
-                    </thead>
+            <table className="data-table">
+                <thead>
+                    <tr>
+                        <th colSpan="2">SUMMARY</th>
+                    </tr>
+                </thead>
 
-                    <tbody>
-                        <tr>
-                            <th>Total floors:</th>
-                            <td>{ ParkingData.length }</td>
-                        </tr>
-                        <tr>
-                            <th>Total slots:</th>
-                            <td>{ this.totalParkings() }</td>
-                        </tr>
-                        <tr>
-                            <th>Total occupied slots:</th>
-                            <td>{ this.totalOccupiedParkings() }</td>
-                        </tr>
-                        <tr>
-                            <th>Total available slots:</th>
-                            <td>{ this.totalParkings() - this.totalOccupiedParkings() }</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                <tbody>
+                    <tr>
+                        <th>Total floors:</th>
+                        <td>{ ParkingData.length }</td>
+                    </tr>
+                    <tr>
+                        <th>Total slots:</th>
+                        <td>{ this.totalParkings() }</td>
+                    </tr>
+                    <tr>
+                        <th>Total occupied slots:</th>
+                        <td>{ this.totalOccupiedParkings() }</td>
+                    </tr>
+                    <tr>
+                        <th>Total available slots:</th>
+                        <td>{ this.totalParkings() - this.totalOccupiedParkings() }</td>
+                    </tr>
+                </tbody>
+            </table>
+
         );
     }
 }

@@ -19,12 +19,15 @@ class App extends Component {
                 </header>
 
                 <main className="main">
-                    <div className="grid-container total-data">
-                        <GetTotalData />
-                    </div>
-
-                    <div className="grid-container individual-data">
-                        <GetEachFloorData />
+                    <div className="grid-container">
+                        <div className="grid-x grid-margin-x">
+                            <div className="cell small-12 medium-6">
+                                <GetTotalData />
+                            </div>
+                            <div className="cell small-12 medium-6">
+                                <GetEachFloorData />
+                            </div>
+                        </div>
                     </div>
                 </main>
             </div>

@@ -1,5 +1,5 @@
 #root {
-	max-width: 800px;
+	max-width: 1200px;
 	width: 100%;
 	display: block;
 	margin: 0 auto;
@@ -35,18 +35,16 @@ header {
 	}
 
 	.each-floor-data {
-		.data-table {
-			table {
-				thead th {
-					font-size: 18px;
-					background-color: #b6dddd;
-				}
+		table {
+			thead th {
+				font-size: 18px;
+				background-color: #b6dddd;
 			}
+		}
 
-			> tbody {
-				> tr {
-					background-color: #fff;
-				}
+		> tbody {
+			> tr {
+				background-color: #fff;
 			}
 		}
 	}
