@@ -1,15 +1,13 @@
-import React from 'react';
-import Store from "./Store";
+import React, {Component} from 'react';
 import GetEachFloorData from "./components/GetEachFloorData";
 import GetTotalData from "./components/GetTotalData";
 import UpdateParkingLots from "./components/UpdateParkingLots";
 
 import './App.scss';
 
-function App() {
-
-    return (
-        <Store>
+class App extends Component {
+    render() {
+        return (
             <div className="main-content">
                 <header>
                     <div className="grid-container">
@@ -35,8 +33,8 @@ function App() {
                     </div>
                 </main>
             </div>
-        </Store>
-    );
+        );
+    }
 }
 
 export default App;
