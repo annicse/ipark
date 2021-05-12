@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import {Context} from "../Store";
 
 const GetEachFloorData = () => {
-    const [state, setState] = useContext(Context);
+    const [parkingState] = useContext(Context);
 
     return (
         <table className="data-table each-floor-data">
@@ -14,7 +14,7 @@ const GetEachFloorData = () => {
 
             <tbody>
             {
-                state.parkings.map( (pd, index) => {
+                parkingState.parkings.map( (pd, index) => {
                     return(
                         <tr key={index}>
                             <td>

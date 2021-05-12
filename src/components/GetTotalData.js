@@ -1,18 +1,21 @@
 import React, {useContext} from "react";
 import {Context} from "../Store";
 
-function GetTotalData() {
-    const [state, setState] = useContext(Context);
-    let prevState = state;
+const GetTotalData = () => {
+    const [parkingState] = useContext(Context);
 
-    prevState.totalSlots = state.parkings.reduce((accumulator, currentValue) => accumulator + currentValue.totalSlots, 0);
-    prevState.occupiedSlots = state.parkings.reduce((accumulator, currentValue) => accumulator + currentValue.occupiedSlots, 0);
-    prevState.totalFloors = state.parkings.length;
+    /*
+    let prevState = parkingState;
 
-    setState(prevState);
+    prevState.totalSlots = parkingState.parkings.reduce((accumulator, currentValue) => accumulator + currentValue.totalSlots, 0);
+    prevState.occupiedSlots = parkingState.parkings.reduce((accumulator, currentValue) => accumulator + currentValue.occupiedSlots, 0);
+    prevState.totalFloors = parkingState.parkings.length;
+
+    setParkingState(prevState);
+    */
 
     return (
-        <table className="data-table">
+        <table className="data-table summary">
             <thead>
                 <tr>
                     <th colSpan="2">SUMMARY:</th>
@@ -22,19 +25,19 @@ function GetTotalData() {
             <tbody>
                 <tr>
                     <th>Total floors:</th>
-                    <td>{ state.totalFloors }</td>
+                    <td>{parkingState.totalFloors}</td>
                 </tr>
                 <tr>
                     <th>Total slots:</th>
-                    <td>{state.totalSlots}</td>
+                    <td>{parkingState.totalSlots}</td>
                 </tr>
                 <tr>
                     <th>Total occupied slots:</th>
-                    <td>{state.occupiedSlots}</td>
+                    <td>{parkingState.occupiedSlots}</td>
                 </tr>
                 <tr>
                     <th>Total available slots:</th>
-                    <td>{state.totalSlots - state.occupiedSlots}</td>
+                    <td>{parkingState.totalSlots - parkingState.occupiedSlots}</td>
                 </tr>
             </tbody>
         </table>

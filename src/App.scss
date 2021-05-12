@@ -32,6 +32,10 @@ header {
 				text-align: left;
 			}
 		}
+
+		&.summary td {
+			text-align: right;
+		}
 	}
 
 	.each-floor-data {
@@ -44,6 +48,10 @@ header {
 			td, th {
 				padding: 3px 10px;
 				font-size: 14px;
+			}
+
+			td {
+				text-align: right;
 			}
 		}
 

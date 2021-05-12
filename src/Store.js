@@ -29,13 +29,17 @@ const initialState = {
     ]
 };
 
+initialState.totalSlots = initialState.parkings.reduce((accumulator, currentValue) => accumulator + currentValue.totalSlots, 0);
+initialState.occupiedSlots = initialState.parkings.reduce((accumulator, currentValue) => accumulator + currentValue.occupiedSlots, 0);
+initialState.totalFloors = initialState.parkings.length;
+
 export const Context = React.createContext(null);
 
 const Store = ({ children }) => {
-    const [state, setState] = useState(initialState);
+    const [parkingState, setParkingState] = useState(initialState);
 
     return (
-        <Context.Provider value={[state, setState]}>
+        <Context.Provider value={[parkingState, setParkingState]}>
             {children}
         </Context.Provider>
     );
