@@ -3,7 +3,6 @@ import {Context} from "../Store";
 
 const GetEachFloorData = () => {
     const [state, setState] = useContext(Context);
-    console.log(state);
 
     return (
         <table className="data-table each-floor-data">
