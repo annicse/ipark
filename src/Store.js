@@ -29,9 +29,9 @@ const initialState = {
     ]
 };
 
-initialState.totalSlots = initialState.parkings.reduce((accumulator, currentValue) => accumulator + currentValue.totalSlots, 0);
-initialState.occupiedSlots = initialState.parkings.reduce((accumulator, currentValue) => accumulator + currentValue.occupiedSlots, 0);
-initialState.totalFloors = initialState.parkings.length;
+//initialState.totalSlots = initialState.parkings.reduce((accumulator, currentValue) => accumulator + currentValue.totalSlots, 0);
+//initialState.occupiedSlots = initialState.parkings.reduce((accumulator, currentValue) => accumulator + currentValue.occupiedSlots, 0);
+//initialState.totalFloors = initialState.parkings.length;
 
 export const Context = React.createContext(null);
 

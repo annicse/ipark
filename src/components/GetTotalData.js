@@ -2,9 +2,8 @@ import React, {useContext} from "react";
 import {Context} from "../Store";
 
 const GetTotalData = () => {
-    const [parkingState] = useContext(Context);
+    const [parkingState, setParkingState] = useContext(Context);
 
-    /*
     let prevState = parkingState;
 
     prevState.totalSlots = parkingState.parkings.reduce((accumulator, currentValue) => accumulator + currentValue.totalSlots, 0);
@@ -12,7 +11,6 @@ const GetTotalData = () => {
     prevState.totalFloors = parkingState.parkings.length;
 
     setParkingState(prevState);
-    */
 
     return (
         <table className="data-table summary">
